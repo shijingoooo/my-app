@@ -1,3 +1,18 @@
 <h1>
-  {{title}}
+  <h1>{{title}}</h1>
+  <h2>My favorite hero is: {{myHero}}</h2>
+  <ul>
+    <li *ngFor="let hero of heroes">
+      {{ hero }}
+    </li>
+  </ul>
+  <button (click)="onClick()">Click me!</button>
+  {{clickMessage}}
+  <input #box (keyup)="0">
+  {{box.value}}
+  <!--<form>
+    <input type="text" [formControl]="loginControl">
+    {{loginControl.value}}
+  </form>-->
+  <app-hero-form></app-hero-form>
 </h1>
